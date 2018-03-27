@@ -2,7 +2,7 @@
 
 #### 介绍
 
-  Git 是*分布式*版本控制系统(distributed version control system)，最初由linux之父**Linus Benedict Torvalds**在2005年开发，是目前最流行的版本管理系统。
+  Git 是**分布式**版本控制系统(distributed version control system)，最初由linux之父**Linus Benedict Torvalds**在2005年开发，是目前最流行的版本管理系统。
 
 #### 安装(此处之介绍在mac下用brew安装)
 
@@ -86,7 +86,7 @@
     alias.st=status
     color.ui=true
     url.https://github.com.insteadof=git://github.com
-    user.name=lipf
+    user.name=muyuefei
     user.email=muyuefei158@gmail.com
     merge.tool=vimdiff
 
