@@ -27,6 +27,67 @@
   然后重新打开terminal
 
   更新git
+    
     $ brew upgrade git
 
 #### 配置
+
+  查看当前用户名
+
+    $ git config --global user.name
+
+  设置用户名
+
+    $ git config --global user.name "YOUR_USERNAME"
+
+  设置邮箱
+
+    $ git config --global user.email "example@example.com"
+
+  以上配置是全局的，只需配置一次。下面介绍一下配置的三个层级
+  项目层级，只对当前project有效，配置文件`.git/config`
+  
+    $ git config user.name "YOUR_USERNAME"
+
+  用户层级，对当前用户所有项目有效，配置文件`~/.git/config`
+
+    $ git config --global user.name "YOUR_USERNAME"
+
+  系统层级，对所有用户的所有的项目有效，配置文件`/etc/gitconfig`
+
+    $ git config --system user.name "YOUR_USERNAME"
+
+  *为了确保你的提交呈现在你的贡献图（contribution graph)中，需要使用**GitHub验证**的邮件地址进行提交*
+
+  列出git配置
+
+    $ git config --global --list
+
+#### 克隆项目
+
+    $ git clone <版本库地址> <本地目录名>
+  
+  >远程克隆
+  >> ssh 
+  
+    $ git clone username@host:/path/to/repository
+  
+  >> https
+
+    $ git clone https:///path/to/repository
+
+#### 我常用的配置信息
+
+    alias.last=log -1
+    alias.lg=log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen (%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    alias.br=branch
+    alias.ci=commit
+    alias.co=checkout
+    alias.st=status
+    color.ui=true
+    url.https://github.com.insteadof=git://github.com
+    user.name=lipf
+    user.email=muyuefei158@gmail.com
+    merge.tool=vimdiff
+
+![](https://sdtimes.com/wp-content/uploads/2014/08/0826.sdt-git-21.jpg)
