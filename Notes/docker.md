@@ -21,5 +21,14 @@
     启动/停止/重启  容器
 6. `docker pull/push xxx registry`
     从/向指定仓库拉取/推送 镜像, 默认docker hub
+
+7. `docker system df`
+    列出docker所占用空间大小
+8. `docker images -f dangling=true`
+    "-f" 是"--filter" 过滤器, 列出所有虚悬镜像--> 仓库名、标签均为none的镜像
+9. `docker images prune`
+    删除所有的虚悬镜像
+10. `docker images --format "{{.ID}}"` 
+    "--format" docker 模版语言格式化
     
 
