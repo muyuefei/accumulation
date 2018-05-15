@@ -34,7 +34,8 @@
     删除镜像
 12. `docker images --digests`
     列出镜像摘要
-13. `docker commit --author "xx" --message "" 镜像名 镜像registry名:tag`
+13. `docker commit --author "xx" --message ""` 
+    镜像名 镜像registry名:tag\n
     提交修改到镜像
 14. `docker diff Container`
     查看容器做的修改
