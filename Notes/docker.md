@@ -48,3 +48,27 @@
 
 4. 不要用`docker commit` 来定制镜像，要定制镜像用Dockerfile.
 
+### Dockerfile
+*docker 语法分两部分： 注释和命令+参数*
+1. "FROM" --> 指定基础镜像
+2. "RUN"  --> 执行命令行命令
+    *shell 格式：RUN <命令>
+    *exec  形式: RUN ["可执行文件", "参数1", "参数2"]
+3. "COPY" --> 跟"ADD"基本一样, 不支持资源地址下载与解压缩
+4. "MAINTAINER" --> 维护者信息
+5. "CMD" --> 容器启动时执行命令
+    * CMD ["executable", "param1", "param2"]使用exec执行，推荐使用
+    * CMD command param1 param2 在/bin/sh 上执行
+    * CMD ["param1", "param2"]提供给entrypoint做默认参数
+    * *每个容器只能执行一条CMD命令，多个CMD命令时，只执行最后一条*
+6. "USER" --> 指定运行容器时的用户名或UID
+7. "VOLUME" --> 用于容器共享宿主机文件目录
+8. "WORKDIR" --> 用于设置CMD指明的命令的运行目录
+9. "ENV" --> 指定一个环境变量，后续会被RUN指令使用
+10. "ADD" --> 从源系统的文件系统上复制文件到目标容器的文件系统.如果源是一个资源地址，那么该资源会被下载并复制到容器中，如果是压缩资源，也会做解压处理.
+11. "EXPOSE" --> 指定在docker允许时指定的端口进行转发, 及端口映射
+12. "ENTRYPOINT" --> 配置容器启动后执行的命令，不会被docker run 提供的参数覆盖
+    * ENTRYPOINT ["executable", "param1", "param2"]
+    * ENTRYPOINT command prama1 prama2 在shell中执行
+    * *每个dockerfile只能有一个ENTRYPOINT, 即使有多个也会只执行最后一个*
+13. "ONBUILD" --> 指定的命令在构建时并不执行，而是在它的子镜像中执行, 即：当我们在dockerfile中添加这条指令，不会对当前构建镜像起作用，但当我们再用一个新的基于这个镜像的dockerfile构建镜像时就会执行指令。
