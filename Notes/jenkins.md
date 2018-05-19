@@ -7,6 +7,7 @@
 
 ## 忘记密码
 1. 删除Jenkins目录下config.xml文件中下面代码，并保存文件。
+```
     <useSecurity>true</useSecurity>  
     <authorizationStrategy class="hudson.security.FullControlOnceLoggedInAuthorizationStrategy">  
     <denyAnonymousReadAccess>true</denyAnonymousReadAccess>  
@@ -15,6 +16,7 @@
     <disableSignup>true</disableSignup>  
     <enableCaptcha>false</enableCaptcha>  
     </securityRealm>  
+```
 
 2. 重新加载配置文件 http://jenkins-server/reload
 
