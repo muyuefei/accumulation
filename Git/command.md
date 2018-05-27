@@ -4,12 +4,12 @@
 
 1.  添加远程仓库 
     $git remote add 项目git地址
-        2.  diff 
+2.  diff 
     1. 提交之前，与最后一次提交记录做比较，修改内容
-        *. $ git diff HEAD 在add前后都可用
-        *. $ git diff --staged 在add后使用
+        * $ git diff HEAD 在add前后都可用
+        * $ git diff --staged 在add后使用
     2. 比较两个分支
-        *. $ git diff <branch1>...<branch2.
+        * $ git diff <branch1>...<branch2.
 3. 删除远程仓库文件，但在本地保留
     $ git rm --cached <file>
 4. 重命名
@@ -72,4 +72,3 @@
         $ git log <since>..<utils> 
     7. 按分支, 包含了在branch_tow 分支而不在branch_one 分支的提交
         $ git log branch_one...branch_tow
->>>>>>> update command
