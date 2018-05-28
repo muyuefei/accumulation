@@ -3,13 +3,13 @@
 ***
 
 ### 创建私有yum仓库
-  * 创建yum仓库目录xxx/yum/xxx/x86_64 *
+  *创建yum仓库目录xxx/yum/xxx/x86_64*
    
   * 进入yum仓库目录 *
 
   * 将rpm 包放在此目录下 *
 
-  * 安装createrepo *
+  *安装createrepo*
 
     $ yum -y install createrepo
 
