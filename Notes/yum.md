@@ -18,6 +18,7 @@
     $ createrepo -pdo yum仓库目录 yum 仓库目录
 
   *用web服务器代理访问*
+
     * apache
     * nginx
     * python -m SimpleHTTPServer 80 & >/dev/null &
