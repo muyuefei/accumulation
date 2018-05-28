@@ -72,3 +72,19 @@
     *  $ git log <since>..<utils> 
     * 按分支, 包含了在branch_tow 分支而不在branch_one 分支的提交
     *  $ git log branch_one...branch_tow
+20. 重命名远程服务器名, 如，默认远程服务器名为origin，现改为gitserver
+        * $ git remote -o gitserver https://github.com/xxx.git
+        * $ git remote rename <原主机名> <新主机名>
+21. 查看远程服务器名
+    * $ git remote
+22. 查看远程主机信息
+    * $ git remote show <主机名>
+23. 将本地项目传到github上
+    * 现在github创建一个空项目，并记住地址https://github.com/xxx/xxx.git
+    * cd 到本地目录
+        * $ git init
+        * $ git remote add <主机名> <git项目地址>
+        * $ git add .
+        * $ git commit -m "注释"
+        * $ git push -u <主机名> master
+24.
