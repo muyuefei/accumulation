@@ -2,6 +2,31 @@
 
 ***
 
+### **docker 的核心组件**
+    * Docker客户端和服务器，即Docker引擎
+    * Docker 镜像
+    * Registry
+    * Docker 容器
+
+### **docker 的目标/优势**
+1. 提供一个简单、轻量的建模方式
+2. 职责的逻辑分离
+3. 快速、高效的开发生命周期
+4. 鼓励使用面向服务的架构
+    * 推荐单个容器只运行一个应用程序或进程
+
+### **docker 的注意项**
+
+### **安装docker的先决条件**
+    * 64位的CPU架构，不支持32位
+    * Linux3.8以上版本内核
+    * 内核必须支持一种适合的存储驱动
+    * 内核必须支持并开启cgroup和命名空间namespace功能
+
+### **docker 安装脚本**
+    
+    $ curl https://get.docker.com/ | sudo sh
+
 ### **常用命令**
 
 1. `docker run -it xxx bash`
@@ -40,6 +65,13 @@
     查看容器做的修改
 15. `docker history 镜像registry名:tag`
     查看某个镜像的修改历史
+16. `docker attach Container`
+    重新附着到容器会话上，退出则容器也stop
+17. `docker logs <continer>`
+    查看容器日志
+18. `docker logs --tail 0 -f <continer>`  
+    实时追踪容器最新日志
+
 ### 注意点
 1. docker rmi 镜像，当有多个别的标签指向同一个镜像时，有可能只会删除镜像标签，而并没有真正删除镜像。
 2. docker 容器是依赖镜像为基础的，当镜像有容器存在（无论是否活跃），则无法删除。
