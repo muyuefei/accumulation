@@ -29,12 +29,15 @@
 
 ### **常用命令**
 
-1. `docker run -it --log-driver --restart=always --name <container name> -d  xxx bash`
+1. `docker run -it -v <local dir>:<container dir> -p <local port>:<container port> --log-driver --restart=always --name <container name> -d  xxx bash`
 
     * "run": 启动容器
     * "-i":  交互
     * "-t":  终端
     * "-d":  后台执行
+    * "-v":  指定容器挂在宿主机目录
+        * 可以在<container port>后加上'rw'或者'ro'指定目录的读写状态, 如" -v xxx:/root/dir:ro"，代表只能读
+    * "-p":  指定容器映射宿主机端口, 如果是“-P”, 表示dockerfile中expose的所有容器端口都通过宿主机公开
     * "--log-driver": 指定日志驱动，默认json-file
     * "--name": 容器名称
     * "--restart": 容器在什么条件下重启
@@ -153,3 +156,11 @@
 17. "LABEL" --> 用于为镜像添加元数据，以键值对形式指定，指定后可以通过"docker inspect"  查看
 
 18. "ARG" --> 指定传递给构建运行时的变量，如"ARG build_user=xxx", 可以在构建时用"docker build --build_user=xx" 指定xx并覆盖xxx
+
+
+### 构建docker内部通信
+
+
+### 构建Jenkins和Docker服务器
+
+### Docker Api
