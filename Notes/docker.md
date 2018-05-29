@@ -29,19 +29,19 @@
 
 ### **常用命令**
 
-1. `docker run -it --log-driver --restart=always --name <container name> -d  xxx bash
-    "run": 启动容器
-    "-i":  交互
-    "-t":  终端
-    "-d":  后台执行
-    "--log-driver": 指定日志驱动，默认json-file
-    "--name": 容器名称
-    "--restart": 容器在什么条件下重启
+1. `docker run -it --log-driver --restart=always --name <container name> -d  xxx bash`
+
+    * "run": 启动容器
+    * "-i":  交互
+    * "-t":  终端
+    * "-d":  后台执行
+    * "--log-driver": 指定日志驱动，默认json-file
+    * "--name": 容器名称
+    * "--restart": 容器在什么条件下重启
         * always: 无论什么情况下退出，都重启
         * on-failure:n: 只有当退出码非0时，才会重启, 最多n次
-    "xxx": 容器镜像
-    "bash":shell交互方式
-    `
+    * "xxx": 容器镜像
+    * "bash":shell交互方式
 
 2. `docker images / docker image ls` 
     列出镜像
