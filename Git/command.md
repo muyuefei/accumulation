@@ -87,4 +87,5 @@
         * $ git add .
         * $ git commit -m "注释"
         * $ git push -u <主机名> master
-24.
+24. 避免中间本地小版本提交记录也提交到版本库
+    * git merge --no-commit --squash
