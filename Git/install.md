@@ -63,7 +63,6 @@
     $ git config user.email "YOUR_EMAIL"
     此时用git config --list 会发现有两个不同的用户名，邮箱，会优先用项目级别用户名，邮箱
     
-
   *为了确保你的提交呈现在你的贡献图（contribution graph)中，需要使用**GitHub验证**的邮件地址进行提交*
 
   列出git配置
